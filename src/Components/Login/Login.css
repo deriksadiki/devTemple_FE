@@ -1,0 +1,64 @@
+.mainBody {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("../../Images/background.png");
+  background-size: cover;
+}
+
+.mainHeader {
+  width: 96%;
+  margin-left: 2%;
+  font-size: 30px;
+  color: #2d39a6;
+}
+
+.accountText {
+  color: #2d39a6;
+  text-align: right;
+  float: right;
+  text-decoration: underline;
+}
+.loginBody {
+  border: 2px groove #70707031;
+  height: 51vh;
+  width: 35%;
+  background-color: #ffffff;
+  color: #2d39a6;
+}
+
+.loginContainer {
+  margin-left: 40%;
+  margin-top: 6%;
+}
+
+.inputs {
+  width: 17vw;
+  height: 3.5vh;
+  border: 2px groove #70707031;
+}
+
+.alignLogin {
+  margin-left: 7%;
+}
+
+.loginBtn {
+  background-color: #2d39a6;
+  width: 17.5vw;
+  height: 4vh;
+  color: white;
+  border-width: 0px;
+  margin-top: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.loginTxt {
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.loginTxtHeaders {
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
