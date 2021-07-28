@@ -24,7 +24,6 @@ function RegisterPart2() {
                 </td>
               </tr>
             </table>
-
             <table className="regTable">
               <tr>
                 <td>

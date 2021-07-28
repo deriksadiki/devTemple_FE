@@ -1,0 +1,48 @@
+.headerBody {
+  height: 20vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("../../Images/background.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.headHeader {
+  width: 96%;
+  margin-left: 2%;
+  font-size: 30px;
+  color: #2d39a6;
+  margin-top: -1vh;
+}
+
+.headHeader2 {
+  width: 96%;
+  margin-left: 2%;
+  color: #2d39a6;
+  margin-top: -1vh;
+}
+
+.headHeader3 {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: -1vh;
+}
+
+.headerAccountText {
+  color: #2d39a6;
+  text-align: right;
+  float: right;
+  font-size: 13px;
+}
+.headerAccountText2 {
+  color: #2d39a6;
+  text-align: right;
+  float: right;
+  font-size: 13px;
+  margin-top: -2vh;
+}
+
+.headerContainer {
+  margin-left: 5%;
+  margin-top: 5%;
+}

@@ -1,1 +1,56 @@
+.selectedItems {
+  background-color: #2a359510;
+  width: 40.5vw;
+  min-height: 11vh;
+}
+.selectedBtn {
+  border: 2px solid rgba(71, 71, 71, 0.096);
+  background-color: #ffffff;
+  height: 4vh;
+  margin-right: 1vw;
+}
 
+.homeInputs {
+  width: 40vw;
+  height: 4vh;
+  border: 2px groove #d1d1d131;
+  margin-right: 3vw;
+  box-shadow: 1px 1px 2px 2px #ececec52;
+}
+
+.miniHomeInputs {
+  width: 20vw;
+  height: 4vh;
+  border: 2px groove #d1d1d131;
+  margin-right: 3vw;
+  box-shadow: 1px 1px 2px 2px #ececec52;
+}
+
+.homeBtn {
+  background-color: #2d39a6;
+  width: 10vw;
+  height: 4.5vh;
+  color: white;
+  border-width: 0px;
+  margin-top: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.headerBodyContainer {
+  border: 2px groove #70707031;
+  height: 40vh;
+  width: 90%;
+  background-color: #ffffff;
+  margin-left: 1vw;
+  box-shadow: 1px 1px 4px 4px #ececec;
+}
+.homeRadio {
+  margin-left: 35vw;
+}
+
+.radioBtn {
+  margin-right: 0.5vw;
+  width: 15px;
+  margin-top: 5px;
+}
