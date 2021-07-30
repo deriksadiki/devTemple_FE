@@ -24,18 +24,45 @@ function Search() {
               <table>
                 <tr>
                   <td>Stack</td>
-                  <td>Projects</td>
+                  <td className="skills">Projects</td>
                 </tr>
                 <tr>
-                  <td className="leftRow">
-                    <p>
-                      <span className="barBtn">JavaScript</span>
-                      <span className="myProgress">
-                        <span className="myBar">20%</span>
-                      </span>
-                    </p>
+                  {names.map((val, indx) => {
+                    return (
+                      <div>
+                        <td className="leftRow">
+                          <div className="barBtn">Javascript</div>
+                          <div className="matrixparent">
+                            <div
+                              className="matrixchild"
+                              style={{ width: parseInt("70") + "%" }}
+                            >
+                              <span className="matrixtext">60-80%</span>
+                            </div>
+                          </div>
+                        </td>
+                      </div>
+                    );
+                  })}
+                  <td className="skills">
+                    {names.map((val, indx) => {
+                      return (
+                        <div>
+                          <td className="leftRow">
+                            <div className="barBtn">Javascript</div>
+                            <div className="matrixparent">
+                              <div
+                                className="matrixchild"
+                                style={{ width: parseInt("70") + "%" }}
+                              >
+                                <span className="matrixtext">60-80%</span>
+                              </div>
+                            </div>
+                          </td>
+                        </div>
+                      );
+                    })}{" "}
                   </td>
-                  <td>Projects</td>
                 </tr>
                 <tr>
                   <td>Other Links</td>
