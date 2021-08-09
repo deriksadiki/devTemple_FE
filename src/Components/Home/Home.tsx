@@ -1,5 +1,4 @@
 import React from "react";
-import { getCurrentUser } from "../../Provider/Methods";
 import "./Home.css";
 
 function Home() {

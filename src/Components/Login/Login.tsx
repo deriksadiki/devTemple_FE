@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { signInUser } from "../../Providers/Functions";
 import "./Login.css";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const signIn = () => {
+    signInUser(email, password)
+      .then((msg) => {
+        alert("welcome back");
+        window.location.reload();
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
   return (
     <div className="mainBody">
       <div className="mainHeader">
@@ -17,10 +30,31 @@ function Login() {
           <div className="alignLogin">
             <p style={{ fontSize: 20 }}>Sign In</p>
             <div className="loginTxtHeaders">Email</div>
-            <input className="inputs" placeholder="jon@doe.co.za" />
+            <input
+              className="inputs"
+              placeholder="jon@doe.co.za"
+              onChange={(text) => {
+                setEmail(text.target.value);
+              }}
+            />
             <div className="loginTxtHeaders">Password</div>
-            <input className="inputs" placeholder="Your Password" /> <br></br>
-            <button className="loginBtn">Sign In</button>
+            <input
+              className="inputs"
+              type="password"
+              placeholder="Your Password"
+              onChange={(text) => {
+                setPassword(text.target.value);
+              }}
+            />{" "}
+            <br></br>
+            <button
+              className="loginBtn"
+              onClick={() => {
+                signIn();
+              }}
+            >
+              Sign In
+            </button>
             <br></br>
             <p className="loginTxt">Forgot Password?</p>
             <p className="loginTxt">Don't have an Account?</p>
