@@ -1,27 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { getAllDevs } from "../../Providers/Functions";
 import "./Home.css";
 
 let skillsArray = ["JavaScript", "Java", "Php", "ruby", "css", "html", "React"];
 
 function Home() {
   let tempArr = new Array();
-  const [devs, setDevs] = useState([]);
+
   const [devSkills, setDevSkills] = useState(tempArr);
   const [selectedSkills, setSelectedSkills] = useState(tempArr);
   const [skill, setSkill] = useState("");
-  useEffect(() => {
-    getDevs();
-  });
-  const getDevs = () => {
-    getAllDevs
-      .then((devs: any) => {
-        setDevs(devs);
-      })
-      .catch(() => {
-        alert("network error");
-      });
-  };
 
   const searchSkill = (word: string) => {
     if (word === "") {
@@ -66,6 +53,11 @@ function Home() {
     }, 100);
   };
 
+  const SearchDev = async () => {
+    await localStorage.setItem("searchFilter", JSON.stringify(selectedSkills));
+    window.location.href = "/search";
+  };
+
   return (
     <div>
       <div className="headerContainer">
@@ -102,7 +94,14 @@ function Home() {
                 className="miniHomeInputs"
                 placeholder="Experience in years"
               />
-              <button className="homeBtn">Search</button>
+              <button
+                className="homeBtn"
+                onClick={() => {
+                  SearchDev();
+                }}
+              >
+                Search
+              </button>
             </p>
             <p style={{ fontSize: 13 }}>
               <span>

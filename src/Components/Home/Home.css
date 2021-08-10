@@ -61,3 +61,11 @@
   width: 15px;
   margin-top: 5px;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

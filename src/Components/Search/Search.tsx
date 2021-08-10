@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getAllDevs } from "../../Providers/Functions";
 import "./Search.css";
 let names = [25, 23, 15, 20];
 let names2 = [25, 23];
 let btns = ["Copy Email", "Send Inmail"];
 
 function Search() {
+  let tempArr = new Array();
+  const [devs, setDevs] = useState(tempArr);
+  useEffect(() => {
+    getDevs();
+  });
+  const getDevs = () => {
+    getAllDevs
+      .then((devs: any) => {
+        setDevs(devs);
+        console.log(devs);
+      })
+      .catch(() => {
+        alert("network error");
+      });
+  };
+
   return (
     <div>
       <div className="searchContainer">
@@ -12,7 +29,7 @@ function Search() {
           <div>
             <p className="searchTxt">Search Results</p>
             <div className="devList">
-              {names.map((val, indx) => {
+              {devs?.map((val, indx) => {
                 return (
                   <div className="devBox" style={{ fontSize: 12 }} key={indx}>
                     <img
@@ -22,7 +39,9 @@ function Search() {
                       }
                     />
                     <div style={{ position: "absolute" }}>
-                      <p>Jon Doe</p>
+                      <p>
+                        {val.fname} {val.sname}
+                      </p>
                       <p>
                         3 years experience <span> Intermediate</span>
                       </p>
