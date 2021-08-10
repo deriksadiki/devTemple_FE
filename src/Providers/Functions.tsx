@@ -22,3 +22,13 @@ export const checkAuthState = new Promise((resolve, reject) => {
     }
   });
 });
+
+export const getAllDevs = new Promise((resolve, reject) => {
+  db.ref("dt_users").on("value", (users) => {
+    if (users?.val()) {
+      resolve(users.val());
+    } else {
+      reject("no users");
+    }
+  });
+});

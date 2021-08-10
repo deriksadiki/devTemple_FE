@@ -32,7 +32,7 @@ function AppRouter() {
   return (
     <div>
       {loading ? (
-        <div>laoding please wait</div>
+        <div>loading please wait</div>
       ) : (
         <div>
           {loggedIn ? (
