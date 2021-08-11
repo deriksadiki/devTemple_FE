@@ -46,7 +46,7 @@ export const getAllDevs = new Promise((resolve, reject) => {
           }
         }
         resolve(devsArray);
-        localStorage.setItem("searchFilter", JSON.stringify([]));
+        //localStorage.setItem("searchFilter", JSON.stringify([]));
       } else {
         reject("no users");
       }
