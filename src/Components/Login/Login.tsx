@@ -15,6 +15,10 @@ function Login() {
         alert(err);
       });
   };
+
+  const Register = () => {
+    window.location.href = "/Register";
+  };
   return (
     <div className="mainBody">
       <div className="mainHeader">
@@ -57,7 +61,14 @@ function Login() {
             </button>
             <br></br>
             <p className="loginTxt">Forgot Password?</p>
-            <p className="loginTxt">Don't have an Account?</p>
+            <p
+              className="loginTxt"
+              onClick={() => {
+                Register();
+              }}
+            >
+              Don't have an Account?
+            </p>
           </div>
         </div>
       </div>

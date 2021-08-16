@@ -3,10 +3,25 @@ import "./Register.css";
 import RegisterPart2 from "./RegisterPart2";
 
 function Register() {
-  const [regState, setRegState] = useState(false);
+  const [regState, setRegState] = useState(true);
+  const [firstname, setfirstname] = useState("");
+  const [surname, setSurname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [contact, setContact] = useState("");
 
   const register = () => {
-    setRegState(true);
+    if (
+      firstname != "" &&
+      surname != "" &&
+      email != "" &&
+      password != "" &&
+      contact != ""
+    ) {
+      setRegState(true);
+    } else {
+      alert("Please enter all the details");
+    }
   };
 
   return (
@@ -43,6 +58,10 @@ function Register() {
                       <input
                         className="regInputs"
                         placeholder="jon@doe.co.za"
+                        onChange={(txt) => {
+                          setfirstname(txt.target.value);
+                        }}
+                        value={firstname}
                       />
                     </td>
                     <td>
@@ -50,6 +69,10 @@ function Register() {
                       <input
                         className="regInputs"
                         placeholder="jon@doe.co.za"
+                        onChange={(txt) => {
+                          setSurname(txt.target.value);
+                        }}
+                        value={surname}
                       />
                     </td>
                   </tr>
@@ -59,6 +82,10 @@ function Register() {
                       <input
                         className="regInputs"
                         placeholder="jon@doe.co.za"
+                        onChange={(txt) => {
+                          setEmail(txt.target.value);
+                        }}
+                        value={email}
                       />
                     </td>
                     <td>
@@ -66,6 +93,10 @@ function Register() {
                       <input
                         className="regInputs"
                         placeholder="jon@doe.co.za"
+                        onChange={(txt) => {
+                          setPassword(txt.target.value);
+                        }}
+                        value={password}
                       />
                     </td>
                   </tr>
@@ -75,6 +106,10 @@ function Register() {
                       <input
                         className="regInputs"
                         placeholder="jon@doe.co.za"
+                        onChange={(txt) => {
+                          setContact(txt.target.value);
+                        }}
+                        value={contact}
                       />
                     </td>
                     <td>
@@ -87,7 +122,14 @@ function Register() {
                   <tr>
                     <td>
                       <br></br>
-                      <p className="loginTxt">Alread signed Up?</p>
+                      <p
+                        className="loginTxt"
+                        onClick={() => {
+                          window.history.back();
+                        }}
+                      >
+                        Alread signed Up?
+                      </p>
                     </td>
                   </tr>
                 </table>
