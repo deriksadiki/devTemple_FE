@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SignupPartOne } from "../../Providers/Functions";
 import "./Register.css";
 import RegisterPart2 from "./RegisterPart2";
 
@@ -18,7 +19,13 @@ function Register() {
       password != "" &&
       contact != ""
     ) {
-      setRegState(true);
+      SignupPartOne(email, password, surname, firstname, contact)
+        .then(() => {
+          setRegState(true);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
     } else {
       alert("Please enter all the details");
     }
